@@ -35,9 +35,6 @@ function backup-nixos-config
 
     echo "Копируем конфиги из системы в $repo_dir..."
 
-    cp /etc/nixos/flake.nix $repo_dir/
-    cp /etc/nixos/flake.lock $repo_dir/
-
     cp /etc/nixos/configuration.nix $repo_dir/hosts/nixos.nix
     cp /etc/nixos/hardware-configuration.nix $repo_dir/hardware/
 

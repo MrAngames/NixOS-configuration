@@ -10,7 +10,7 @@ let
 in
 {
   imports = [
-    ../hardware/hardware-configuration.nix
+    ./hardware-configuration.nix
     stylix.nixosModules.stylix
   ];
 
@@ -27,7 +27,6 @@ in
   #services.xserver.videoDrivers = ["nvidia"];
   services.xserver.videoDrivers = ["amdgpu"];
 
-  hardware.nvidia.modesetting.enable = true;
 
   #hardware.opengl.enable = true;
   networking.hostName = "nixos";
@@ -76,10 +75,7 @@ in
 
   nixpkgs.config.allowUnfree = true;
 
-  nix.package = pkgs.nixVersions.latest;
-  nix.extraOptions = ''
-    experimental-features = nix-command flakes
-  '';
+  nix.package = pkgs.nixVersions.stable;
 
   hardware.enableAllFirmware = true;
 
@@ -145,7 +141,6 @@ in
     ripgrep
     fd 
     vimPlugins.LazyVim
-    home-manager
     spicetify-cli
     ninvaders
     tetris
@@ -160,10 +155,8 @@ in
     openssh
     dig
     gobuster
-    telegram-desktop
     yt-dlp
     ffmpeg
-    home-manager
     pavucontrol
     kdePackages.dolphin
     mako
@@ -189,7 +182,7 @@ in
     apksigner
     rustc
     cargo
-    oniux
+    home-manager
   ];
 
 
@@ -228,7 +221,6 @@ localNetworkGameTransfers.openFirewall = true;
   boot.plymouth.enable = true;
 
   system.stateVersion = "25.05";
-
   stylix = {
     enable = false;
 
@@ -243,7 +235,7 @@ localNetworkGameTransfers.openFirewall = true;
       console.enable = true;
       grub.enable = true;
       plymouth.enable = true;
-    };
+  };
   };
 }
 
