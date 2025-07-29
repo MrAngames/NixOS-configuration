@@ -23,15 +23,16 @@
     "format": "{name}"
   },
   "custom/spotify": {
-  "format": "{}",
-  "exec": "playerctl metadata --format '{{ title }} — {{ artist }}'",
+  "format": "🔊 {}",
   "return-type": "plain",
-  "interval": 5,
+  "exec": "playerctl metadata --format '{{title}} — {{artist}}' || echo '⏹️ Not playing'",
+  "interval": 3,
   "max-length": 40,
   "on-click": "playerctl play-pause",
   "on-scroll-up": "playerctl next",
   "on-scroll-down": "playerctl previous"
   },
+
   "clock": {
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     "format-alt": "{:%Y-%m-%d}"

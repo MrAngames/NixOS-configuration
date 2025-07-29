@@ -47,3 +47,20 @@ function backup-nixos-config
     echo "Готово! Теперь можно зайти в $repo_dir и сделать git commit/push."
 end
 
+function git-commit-push
+    set repo_dir ~/nixos-config
+    cd $repo_dir
+
+    read -P "Комментарий к коммиту: " commit_msg
+
+    if test -z "$commit_msg"
+        echo "Ошибка: комментарий не может быть пустым!"
+        return 1
+    end
+
+    git add .
+    git commit -m "$commit_msg"
+    git push
+    echo "Коммит и пуш выполнены успешно!"
+end
+
