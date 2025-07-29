@@ -20,7 +20,7 @@
 ### Клонирование и установка (для новой или существующей системы)
 
 ```bash
-git clone git@github.com:MrAngames/NixOS-configuration.git ~/nixos-config
+git clone https://github.com/MrAngames/NixOS-configuration.git ~/nixos-config
 cd ~/nixos-config
 
 sudo nixos-rebuild switch --flake .#nixos
