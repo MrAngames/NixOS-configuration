@@ -30,3 +30,20 @@ if not set -q SSH_AUTH_SOCK
     set -Ux SSH_AUTH_SOCK (ssh-agent -c | grep SSH_AUTH_SOCK | cut -d ';' -f 1 | sed 's/setenv/set -x/' | source)
 end
 
+function backup-nixos-config
+    set repo_dir ~/nixos-config
+
+    echo "Копируем конфиги из системы в $repo_dir..."
+
+    cp /etc/nixos/flake.nix $repo_dir/
+    cp /etc/nixos/flake.lock $repo_dir/
+
+    cp /etc/nixos/configuration.nix $repo_dir/hosts/nixos.nix
+    cp /etc/nixos/hardware-configuration.nix $repo_dir/hardware/
+
+    cp ~/.config/home-manager/home.nix $repo_dir/home/
+    cp -r ~/.config/home-manager/dotfiles/* $repo_dir/home/dotfiles/
+
+    echo "Готово! Теперь можно зайти в $repo_dir и сделать git commit/push."
+end
+
