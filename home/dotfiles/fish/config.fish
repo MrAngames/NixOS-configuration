@@ -35,8 +35,8 @@ function backup-nixos-config
 
     echo "Копируем конфиги из системы в $repo_dir..."
 
-    cp /etc/nixos/configuration.nix $repo_dir/hosts/nixos.nix
-    cp /etc/nixos/hardware-configuration.nix $repo_dir/hardware/
+    cp /etc/nixos/configuration.nix $repo_dir/nixos/configuration.nix
+    cp /etc/nixos/hardware-configuration.nix $repo_dir/nixos/hardware-configuration.nix
 
     cp ~/.config/home-manager/home.nix $repo_dir/home/
     cp -r ~/.config/home-manager/dotfiles/* $repo_dir/home/dotfiles/
