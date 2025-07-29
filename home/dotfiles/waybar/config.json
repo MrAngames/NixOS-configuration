@@ -9,7 +9,6 @@
     "custom/spotify"
   ],
   "modules-right": [
-    "idle_inhibitor",
     "pulseaudio",
     "power-profiles-daemon",
     "backlight",
