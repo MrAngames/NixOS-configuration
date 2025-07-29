@@ -9,7 +9,7 @@
         system = "x86_64-linux";
         modules = [
           nixos-boot.nixosModules.default
-          ./configuration.nix
+          ./hosts/nixos.nix
         ];
       };
     };
