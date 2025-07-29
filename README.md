@@ -1,27 +1,14 @@
-# Конфигурация NixOS и Home Manager от MrAngames
+# 🧊 NixOS Config by mrangames
 
-Это репозиторий с моими конфигурациями для NixOS и Home Manager.  
-Здесь хранятся системные конфиги и пользовательские dotfiles.
+Добро пожаловать в мой конфиг для [NixOS](https://nixos.org/) и [Home Manager](https://nix-community.github.io/home-manager/), настроенный под Wayland и Hyprland. Здесь хранятся мои системные и пользовательские настройки, разбитые по каталогам.
 
----
-
-## Структура репозитория
-
-- `hosts/nixos.nix` — основная конфигурация NixOS  
-- `hardware/hardware-configuration.nix` — конфигурация оборудования  
-- `home/home.nix` — конфигурация Home Manager для пользователя  
-- `home/dotfiles/` — папка с dotfiles (fish, hyprland, waybar и др.)  
-- `flake.nix` и `flake.lock` — flake-конфигурация
-
----
-
-## Использование
-
-### Клонирование и установка (для новой или существующей системы)
+## 📁 Структура
 
 ```bash
-git clone https://github.com/MrAngames/NixOS-configuration.git ~/nixos-config
-cd ~/nixos-config
+nixos-config/
+├── nixos/           # Системные настройки NixOS (configuration.nix и hardware-configuration.nix)
+├── home/            # Конфигурации Home Manager для пользователя
+│   ├── home.nix     # Главный файл Home Manager
+│   └── dotfiles/    # Пользовательские конфиги (Hyprland, Waybar, Fish и т.д.)
+└── README.md        # Этот файл
 
-sudo nixos-rebuild switch --flake .#nixos
-home-manager switch --flake .#mrangames
