@@ -10,7 +10,7 @@ let
 in
 {
   imports = [
-    ../hardware-configuration.nix
+    ../hardware/hardware-configuration.nix
     stylix.nixosModules.stylix
   ];
 
