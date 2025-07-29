@@ -1,0 +1,78 @@
+window {
+    margin: 0px;
+    padding: 0px;
+    border: 3px solid #4a90e2; /* более синий оттенок */
+    background-color: #1e1f29; /* темно-серый фон */
+    border-radius: 1000000px; /* увеличенное скругление */
+    background-color: rgba(30, 31, 41, 0.9); /* немного прозрачный темно-серый фон */
+}
+
+#input {
+    margin: 0;
+    padding: 12px;
+    border: none;
+    color: #f0f4f8; /* светлый текст */
+    background-color: #3a3d52; /* темно-синий фон для ввода */
+    border-radius: 8px;
+}
+
+#inner-box {
+    margin: 0;
+    padding: 12px;
+    border: none;
+    background-color: #1e1f29;
+    border-radius: 8px;
+}
+
+#outer-box {
+    margin: 0;
+    padding: 12px;
+    border: none;
+    background-color: #1e1f29;
+    border-radius: 18px;
+}
+
+#scroll {
+    margin: 0px;
+    border: none;
+}
+
+#text {
+    margin: 5px;
+    border: none;
+    color: #f0f4f8;
+}
+
+#entry.activatable #text {
+    color: #f0f4f8;
+}
+
+#entry > * {
+    color: #f0f4f8;
+}
+
+#entry:selected {
+    background-color: transparent; /* прозрачный фон */
+    border: 2px solid #4a90e2; /* синий контур для выбранного элемента */
+    border-radius: 8px;
+}
+
+#entry:selected #text {
+    font-weight: bold;
+}
+
+#entry {
+    margin: 0;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#entry > .icon {
+    margin-right: 10px; 
+    font-size: 1.5em; /* Размер иконок */
+}
+
+#entry > * {
+    font-size: 1.2em; /* Размер текста */
+}
+

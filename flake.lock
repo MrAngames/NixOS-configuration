@@ -1,0 +1,43 @@
+{
+  "nodes": {
+    "nixos-boot": {
+      "locked": {
+        "lastModified": 1722927293,
+        "narHash": "sha256-8oCsiFyAuidAdhSz60Lu8+TwCPHxaeWixyv0xT0mLt4=",
+        "owner": "Melkor333",
+        "repo": "nixos-boot",
+        "rev": "afaed735149d0a06f234e54dd2d9db2e18dc64ae",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Melkor333",
+        "repo": "nixos-boot",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1753345091,
+        "narHash": "sha256-CdX2Rtvp5I8HGu9swBmYuq+ILwRxpXdJwlpg8jvN4tU=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "3ff0e34b1383648053bba8ed03f201d3466f90c9",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-25.05",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "nixos-boot": "nixos-boot",
+        "nixpkgs": "nixpkgs"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
