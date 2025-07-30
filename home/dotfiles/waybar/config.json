@@ -9,6 +9,7 @@
     "custom/spotify"
   ],
   "modules-right": [
+    "custom/internet",
     "pulseaudio",
     "power-profiles-daemon",
     "backlight",
@@ -24,7 +25,7 @@
   "custom/spotify": {
   "format": "🔊 {}",
   "return-type": "plain",
-  "exec": "playerctl metadata --format '{{title}} — {{artist}}' || echo '⏹️ Not playing'",
+  "exec": "playerctl metadata --format '{{title}} — {{artist}}' || echo 'Not playing'",
   "interval": 3,
   "max-length": 40,
   "on-click": "playerctl play-pause",
@@ -33,9 +34,10 @@
   },
 
   "clock": {
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "tooltip-format": "⏱️<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     "format-alt": "{:%Y-%m-%d}"
   },
+
   "mpd": {
     "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
     "format-disconnected": "Disconnected ",

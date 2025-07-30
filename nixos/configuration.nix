@@ -13,10 +13,8 @@ in
     ./hardware-configuration.nix
     stylix.nixosModules.stylix
   ];
-
   boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-  
+  boot.loader.efi.canTouchEfiVariables = true;  
   services.openssh.enable = true;
   services.openssh.permitRootLogin = "yes"; # или "prohibit-password"
   hardware.graphics = {
@@ -32,7 +30,7 @@ in
   networking.hostName = "nixos";
   networking.networkmanager.enable = true;
 
-  time.timeZone = "Asia/Omsk";
+  time.timeZone = "Asia/Novosibirsk";
 
   i18n.defaultLocale = "en_US.UTF-8";
   i18n.extraLocales = [ "ru_RU.UTF-8" "en_US.UTF-8" ];
@@ -45,7 +43,7 @@ in
     xkb.options = "grp:alt_shift_toggle";
   };
 
-  services.displayManager.sddm = {
+  services.displayManager = {
     enable = true;
     autoLogin.enable = true;
     autoLogin.user = "mrangames";
@@ -183,9 +181,11 @@ in
     rustc
     cargo
     home-manager
+    libsForQt5.tokodon
+    github-desktop
+    vimPlugins.copilot-vim
+    ollama
   ];
-
-
 
   programs.steam = {
     enable = true;
