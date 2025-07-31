@@ -20,27 +20,15 @@
     "warp-on-scroll": false,
     "format": "{name}"
   },
-  "custom/spotify": {
-  "format": "🔊 {}",
-  "return-type": "plain",
-  "exec": "playerctl metadata --format '{{title}} — {{artist}}' || echo 'Not playing'",
-  "interval": 3,
-  "max-length": 40,
-  "on-click": "playerctl play-pause",
-  "on-scroll-up": "playerctl next",
-  "on-scroll-down": "playerctl previous"
-  },
-  "network": {
-    "interface": "wlp2s0",
-    "format": "{ifname}",
-    "format-wifi": "{essid} ({signalStrength}%) ",
-    "format-ethernet": "{ipaddr}/{cidr} 󰊗",
-    "format-disconnected": "", 
-    "tooltip-format": "{ifname} via {gwaddr} 󰊗",
-    "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
-    "tooltip-format-ethernet": "{ifname} ",
-    "tooltip-format-disconnected": "Disconnected",
-    "max-length": 50
+    "custom/spotify": {
+    "format": "🔊 {}",
+    "return-type": "plain",
+    "exec": "playerctl metadata --format '{{title}} — {{artist}}' || echo 'Not playing'",
+    "interval": 3,
+    "max-length": 40,
+    "on-click": "playerctl play-pause",
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous"
   },
   "hyprland/language": {
     "format": "{}",
@@ -78,11 +66,16 @@
       "critical": 15
     },
     "format": "{capacity}% {icon}",
-    "format-charging": "{capacity}% ",
-    "format-plugged": "{capacity}% ",
+    "format-charging": "{capacity}% {icon}",
+    "format-plugged": "{capacity}% ",
     "format-alt": "{time} {icon}",
-    "format-icons": ["","","","",""]
+    "format-icons": {
+      "charging": ["󰢟","󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󱊦"],
+      "discharging": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+      "plugged": ""
+    }
   },
+
   "tray": {
     "icon-size": 22
   }

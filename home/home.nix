@@ -36,6 +36,13 @@
       echo "Hello, ${config.home.username}!"
     '')
   ];
+  home.pointerCursor = {
+    name = "Bibata-Modern-Classic";
+    package = pkgs.bibata-cursors;
+    size = 24;
+    gtk.enable = true;
+    x11.enable = true;
+  };
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
@@ -69,6 +76,13 @@
     };
 
   };
+  programs.fish.plugins = [
+    {
+      name = "wakatime-fish";
+      inherit (pkgs.fishPlugins.wakatime-fish) src;
+    }
+  ];
+
   programs.waybar = {
     enable = true;
     style = /home/mrangames/.config/home-manager/dotfiles/waybar/style.css;
@@ -88,6 +102,7 @@
       nvim-treesitter
       copilot-vim
       plenary-nvim
+      vim-wakatime
     ];
 
   extraConfig = ''

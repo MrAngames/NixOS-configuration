@@ -63,4 +63,27 @@ function git-commit-push
     git push
     echo "Коммит и пуш выполнены успешно!"
 end
+function saveclipimg
+    set types (wl-paste --list-types)
+    for type in $types
+        switch $type
+            case 'image/png'
+                set ext png
+            case 'image/jpeg'
+                set ext jpg
+            case 'image/bmp'
+                set ext bmp
+            case '*'
+                continue
+        end
+
+        set filename ~/Pictures/(date "+%Y-%m-%d_%H-%M-%S").$ext
+        wl-paste --type $type > $filename
+        echo "Сохранил как $filename"
+        return 0
+    end
+
+    echo "❌ В буфере нет изображения."
+    return 1
+end
 

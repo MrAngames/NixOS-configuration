@@ -12,7 +12,7 @@ window#waybar {
   transition: background 0.3s ease;
 }
 #custom-spotify {
-  color: #d8eaff; /* фирменный цвет Spotify */
+  color: #d8eaff;
   font-weight: bold;
   padding: 0 10px;
 }
@@ -34,6 +34,7 @@ window#waybar {
 
 
 /* Контейнеры модулей */
+#spotify,
 #language,
 #clock,
 #mpd,

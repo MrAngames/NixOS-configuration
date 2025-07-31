@@ -184,6 +184,7 @@ in
     gnome-power-manager
     upower
     networkmanagerapplet
+    imagemagick
   ];
   services.upower.enable = true;
 
