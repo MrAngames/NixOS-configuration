@@ -29,6 +29,7 @@ window#waybar {
 }
 
 /* Контейнеры модулей */
+#language,
 #clock,
 #mpd,
 #idle_inhibitor,

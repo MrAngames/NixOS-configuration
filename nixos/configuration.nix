@@ -185,6 +185,7 @@ in
     github-desktop
     vimPlugins.copilot-vim
     ollama
+    discord
   ];
 
   programs.steam = {

@@ -55,8 +55,11 @@ function git-commit-push
         return 1
     end
 
+    set date (date "+%Y-%m-%d")
+    set full_msg "$commit_msg ($date)"
+
     git add .
-    git commit -m "$commit_msg"
+    git commit -m "$full_msg"
     git push
     echo "Коммит и пуш выполнены успешно!"
 end
