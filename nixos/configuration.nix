@@ -12,6 +12,7 @@ in
   imports = [
     ./hardware-configuration.nix
     stylix.nixosModules.stylix
+    ./cachix.nix
   ];
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;  
@@ -76,6 +77,7 @@ in
   nix.package = pkgs.nixVersions.stable;
 
   hardware.enableAllFirmware = true;
+  
 
   environment.systemPackages = with pkgs; [
     vim
@@ -186,7 +188,11 @@ in
     vimPlugins.copilot-vim
     ollama
     discord
+    gnome-power-manager
+    upower
+    networkmanagerapplet
   ];
+  services.upower.enable = true;
 
   programs.steam = {
     enable = true;

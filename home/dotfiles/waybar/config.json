@@ -9,10 +9,7 @@
     "custom/spotify"
   ],
   "modules-right": [
-    "custom/internet",
     "pulseaudio",
-    "power-profiles-daemon",
-    "backlight",
     "battery",
     "hyprland/language",
     "tray"
@@ -33,77 +30,49 @@
   "on-scroll-up": "playerctl next",
   "on-scroll-down": "playerctl previous"
   },
+  "network": {
+    "interface": "wlp2s0",
+    "format": "{ifname}",
+    "format-wifi": "{essid} ({signalStrength}%) ",
+    "format-ethernet": "{ipaddr}/{cidr} 󰊗",
+    "format-disconnected": "", 
+    "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+    "tooltip-format-ethernet": "{ifname} ",
+    "tooltip-format-disconnected": "Disconnected",
+    "max-length": 50
+  },
   "hyprland/language": {
     "format": "{}",
     "format-en": "en",
     "format-ru": "ru",
-    "keyboard-name": "at-translated-set-2-keyboard"
+    "keyboard-name": "at-translated-set-2-keyboard",
+    "on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next; pkill -SIGRTMIN+10 waybar"
+
   },
   "clock": {
     "tooltip-format": "⏱️<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     "format-alt": "{:%Y-%m-%d}"
   },
-
-  "mpd": {
-    "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
-    "format-disconnected": "Disconnected ",
-    "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
-    "interval": 5,
-    "consume-icons": { "on": " " },
-    "random-icons": {
-      "off": "<span color=\"#f53c3c\"></span> ",
-      "on": " "
-    },
-    "repeat-icons": { "on": " " },
-    "single-icons": { "on": "1 " },
-    "state-icons": { "paused": "", "playing": "" }
-  },
-  "idle_inhibitor": {
-    "format": "{icon}",
-    "format-icons": {
-      "activated": "",
-      "deactivated": ""
-    }
-  },
   "pulseaudio": {
-    "format": "{volume}% {icon} {format_source}",
-    "format-bluetooth": "{volume}% {icon} {format_source}",
-    "format-bluetooth-muted": " {icon} {format_source}",
-    "format-muted": " {format_source}",
-    "format-source": "{volume}% ",
-    "format-source-muted": "",
+    "format": "{volume}% 󰎇",
+    "format-bluetooth": "{volume}%  ",
+    "format-bluetooth-muted": "󰗿",
+    "format-muted": "󰎊",
     "format-icons": {
-      "headphone": "",
+      "headphone": "󰋍",
       "hands-free": "",
       "headset": "",
       "default": ["", "", ""]
     },
     "on-click": "pavucontrol"
   },
-  "network": {
-    "format-wifi": "{essid} ({signalStrength}%) ",
-    "format-ethernet": "{ipaddr}/{cidr} ",
-    "tooltip-format": "{ifname} via {gwaddr} ",
-    "format-linked": "{ifname} (No IP) ",
-    "format-disconnected": "Disconnected ⚠",
-    "format-alt": "{ifname}: {ipaddr}/{cidr}"
-  },
-  "power-profiles-daemon": {
-    "format": "{icon}",
-    "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
-    "tooltip": true,
-    "format-icons": {
-      "default": "",
-      "performance": "",
-      "balanced": "",
-      "power-saver": ""
-    }
-  },
   "backlight": {
     "format": "{percent}% {icon}",
     "format-icons": ["","","","","","","","",""]
   },
   "battery": {
+    "on-click": "gnome-power-statistics",
     "states": {
       "warning": 30,
       "critical": 15

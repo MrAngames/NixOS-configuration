@@ -21,12 +21,17 @@ window#waybar {
   background: transparent;
   border: none;
   outline: none;
-  padding: 2px 6px;
-  border-radius: 6px;
+  padding: 0px 0px;
+  border-radius: 0px;
   color: inherit;
   font-weight: 600;
   transition: background-color 0.3s ease;
 }
+#workspaces {
+  padding: 0px 0px;
+  margin: 0px 0px; 
+}
+
 
 /* Контейнеры модулей */
 #language,
