@@ -2,16 +2,10 @@
 
 let
   unstable = import <nixpkgs-unstable> { system = builtins.currentSystem; };
-
-  stylix = import (builtins.fetchTarball {
-    url = "https://github.com/nix-community/stylix/archive/ea60526c8c2a1c5df2743a9495814dc0b319ef3b.tar.gz";
-    sha256 = "159s98gn59xg51s38p63inj7j3c7plv59a3cc0kwvncy8faq21gf";
-  });
 in
 {
   imports = [
     ./hardware-configuration.nix
-    stylix.nixosModules.stylix
     ./cachix.nix
   ];
   boot.loader.systemd-boot.enable = true;
@@ -145,7 +139,6 @@ in
     ninvaders
     tetris
     nyancat
-    stylix
     catppuccin-grub
     jdk21_headless
     vulkan-loader
@@ -228,21 +221,5 @@ localNetworkGameTransfers.openFirewall = true;
   boot.plymouth.enable = true;
 
   system.stateVersion = "25.05";
-  stylix = {
-    enable = false;
-
-    fonts = {
-      monospace = {
-        name = "JetBrains Mono";
-        package = pkgs.nerd-fonts.jetbrains-mono;
-      };
-    };
-
-    targets = {
-      console.enable = true;
-      grub.enable = true;
-      plymouth.enable = true;
-  };
-  };
 }
 
