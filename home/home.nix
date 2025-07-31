@@ -76,12 +76,6 @@
     };
 
   };
-  programs.fish.plugins = [
-    {
-      name = "wakatime-fish";
-      inherit (pkgs.fishPlugins.wakatime-fish) src;
-    }
-  ];
 
   programs.waybar = {
     enable = true;

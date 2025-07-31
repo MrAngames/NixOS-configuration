@@ -6,7 +6,6 @@ in
 {
   imports = [
     ./hardware-configuration.nix
-    ./cachix.nix
   ];
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;  
@@ -77,19 +76,39 @@ in
     vim
     wget
     libreoffice-qt6-fresh
-    gnome-tweaks gnome-terminal
+    gnome-tweaks
+    gnome-terminal
     bibata-cursors
-    mesa libdrm vulkan-tools
-    firefox obs-studio
-    amnezia-vpn telegram-desktop
-    hyprpaper cartero pipes
+    mesa
+    libdrm
+    vulkan-tools
+    firefox
+    obs-studio
+    amnezia-vpn
+    telegram-desktop
+    hyprpaper
+    cartero
+    pipes
     ayugram-desktop
     speedtest-cli
-    neofetch fastfetch pfetch
-    flatpak rofi wofi
-    gimp kitty htop unzip curl fish
-    spotify ufetch cowsay lolcat
-    virtualbox prismlauncher
+    neofetch
+    fastfetch
+    pfetch
+    flatpak
+    rofi
+    wofi
+    gimp
+    kitty
+    htop
+    unzip
+    curl
+    fish
+    spotify
+    ufetch 
+    cowsay 
+    lolcat
+    virtualbox 
+    prismlauncher
     python311
     (python311.withPackages (ps: with ps; [
       fastapi uvicorn pydantic requests
