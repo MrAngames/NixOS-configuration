@@ -204,6 +204,7 @@ in
     upower
     networkmanagerapplet
     imagemagick
+    wakatime-cli
   ];
   services.upower.enable = true;
 

@@ -11,7 +11,7 @@ window#waybar {
   color: #d8eaff;
   transition: background 0.3s ease;
 }
-#custom-spotify {
+#custom_spotify {
   color: #d8eaff;
   font-weight: bold;
   padding: 0 10px;
@@ -37,12 +37,7 @@ window#waybar {
 #spotify,
 #language,
 #clock,
-#mpd,
-#idle_inhibitor,
 #pulseaudio,
-#network,
-#power-profiles-daemon,
-#backlight,
 #battery {
   margin: 0 4px;
   border: 1px solid rgba(137, 207, 240, 0.3); /* нежно‑голубой контур */
@@ -51,14 +46,10 @@ window#waybar {
 }
 
 /* Hover — усиленный контур */
+#spotify:hover
 #clock:hover,
-#mpd:hover,
 #pulseaudio:hover,
-#network:hover,
-#backlight:hover,
-#battery:hover,
-#idle_inhibitor:hover,
-#power-profiles-daemon:hover {
+#battery:hover {
   border-color: rgba(137, 207, 240, 0.8); /* ярче при наведении */
   background: rgba(51, 122, 255, 0.25);   /* чуть плотнее фон */
   box-shadow: 0 0 4px rgba(137, 207, 240, 0.5);
