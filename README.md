@@ -1,8 +1,12 @@
 # nixos-config
 
+---
+## Потрачено времени: [![wakatime](https://wakatime.com/badge/github/MrAngames/NixOS-configuration.svg)](https://wakatime.com/badge/github/MrAngames/NixOS-configuration)
+
+---
+
 > 🐧 **Моя конфигурация NixOS + Home Manager**  
 > Лично настроено, чтобы было удобно, красиво и максимально reproducible.
-> На это было потрачено около [![wakatime](https://wakatime.com/badge/github/MrAngames/NixOS-configuration.svg)](https://wakatime.com/badge/github/MrAngames/NixOS-configuration) (на самом деле больше, я только потом это включил)
 
 ---
 ## 🖼️ Внешний вид
