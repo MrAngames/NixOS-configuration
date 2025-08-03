@@ -27,7 +27,8 @@ end
 function git-commit-push
     set repo_dir ~/nixos-config
     cd $repo_dir
-
+    git pull
+    echo "Изменения подтянуты"
     read -P "Комментарий к коммиту: " commit_msg
 
     if test -z "$commit_msg"
