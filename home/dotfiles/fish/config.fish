@@ -27,8 +27,6 @@ end
 function git-commit-push
     set repo_dir ~/nixos-config
     cd $repo_dir
-    git pull
-    echo "Изменения подтянуты"
     read -P "Комментарий к коммиту: " commit_msg
 
     if test -z "$commit_msg"
@@ -67,4 +65,6 @@ function saveclipimg
     echo "❌ В буфере нет изображения."
     return 1
 end
+alias ytmp4="yt-dlp -f 'bv*+ba/b' --merge-output-format mp4 -o '%(title)s.%(ext)s'"
+alias ytmp3="yt-dlp -x --audio-format mp3 -o '%(title)s.%(ext)s'"
 
