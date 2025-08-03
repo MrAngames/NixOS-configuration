@@ -1,5 +1,10 @@
 # nixos-config
 
+---
+## Потрачено времени: [![wakatime](https://wakatime.com/badge/github/MrAngames/NixOS-configuration.svg)](https://wakatime.com/badge/github/MrAngames/NixOS-configuration)
+
+---
+
 > 🐧 **Моя конфигурация NixOS + Home Manager**  
 > Лично настроено, чтобы было удобно, красиво и максимально reproducible.
 
@@ -7,7 +12,6 @@
 ## 🖼️ Внешний вид
 
 ![Стиль терминала](./screenshots/2025-07-31_11-27-20.png)
-![Firefox + Neovim](./screenshots/2025-07-31_11-28-01.png)
 ![Waybar](./screenshots/2025-07-31_11-28-10.png)
 
 
