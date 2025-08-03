@@ -34,20 +34,22 @@ window#waybar {
 
 
 /* Контейнеры модулей */
-#spotify,
+#tray,
+#custom_spotify,
 #language,
 #clock,
 #pulseaudio,
 #battery {
-  margin: 0 4px;
+  margin: 2 4px;
   border: 1px solid rgba(137, 207, 240, 0.3); /* нежно‑голубой контур */
   background: rgba(51, 122, 255, 0.12);       /* лёгкий голубой фон */
   transition: all 0.2s ease-in-out;
 }
 
 /* Hover — усиленный контур */
-#spotify:hover
+#custom_spotify:hover
 #clock:hover,
+#tray:hover,
 #pulseaudio:hover,
 #battery:hover {
   border-color: rgba(137, 207, 240, 0.8); /* ярче при наведении */
@@ -61,7 +63,3 @@ window#waybar {
 #battery.charging,
 #battery.plugged   { color: #6bffb3; }
 
-#idle_inhibitor,
-#power-profiles-daemon {
-  padding: 0 10px;
-}

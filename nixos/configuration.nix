@@ -205,6 +205,7 @@ in
     networkmanagerapplet
     imagemagick
     wakatime-cli
+    opencode
   ];
   services.upower.enable = true;
 
