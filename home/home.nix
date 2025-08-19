@@ -41,7 +41,7 @@
     ".config/wofi/style.css".source = ./dotfiles/wofi/style.css;
     ".config/kitty/kitty.conf".source = ./dotfiles/kitty/kitty.conf;
     ".config/fish/config.fish".source = ./dotfiles/fish/config.fish;
-    #".config/mako/config".source = ./dotfiles/mako/config;
+    ".config/mako/config".source = ./dotfiles/mako/config;
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
     #   org.gradle.console=verbose

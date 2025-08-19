@@ -19,7 +19,6 @@ in
   #services.xserver.videoDrivers = ["nvidia"];
   services.xserver.videoDrivers = ["amdgpu"];
 
-
   #hardware.opengl.enable = true;
   networking.hostName = "nixos";
   networking.networkmanager.enable = true;
@@ -76,8 +75,6 @@ in
     vim
     wget
     libreoffice-qt6-fresh
-    gnome-tweaks
-    gnome-terminal
     bibata-cursors
     mesa
     libdrm
@@ -206,6 +203,11 @@ in
     imagemagick
     wakatime-cli
     opencode
+    superTux
+    parabolic
+    cavalier
+    nautilus
+    nnn
   ];
   services.upower.enable = true;
 

@@ -67,4 +67,4 @@ function saveclipimg
 end
 alias ytmp4="yt-dlp -f 'bv*+ba/b' --merge-output-format mp4 -o '%(title)s.%(ext)s'"
 alias ytmp3="yt-dlp -x --audio-format mp3 -o '%(title)s.%(ext)s'"
-
+alias parabolic="flatpak run org.nickvision.tubeconverter"
