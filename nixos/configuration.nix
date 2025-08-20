@@ -15,11 +15,8 @@ in
     enable = true;
     enable32Bit = true;
   };
-  # hardware.opengl has beed changed to hardware.graphics
-  #services.xserver.videoDrivers = ["nvidia"];
   services.xserver.videoDrivers = ["amdgpu"];
 
-  #hardware.opengl.enable = true;
   networking.hostName = "nixos";
   networking.networkmanager.enable = true;
 
@@ -142,7 +139,6 @@ in
     obsidian
     nerd-fonts.jetbrains-mono
     imagemagick
-    imv
     neohtop
     wlsunset
     bat
@@ -204,10 +200,17 @@ in
     wakatime-cli
     opencode
     superTux
-    parabolic
     cavalier
     nautilus
-    nnn
+    vlc 
+    w3m
+    ueberzug
+    swayimg
+    kew
+    cmus
+    moc
+    sonata
+    amberol
   ];
   services.upower.enable = true;
 

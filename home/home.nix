@@ -80,9 +80,10 @@
       vim-devicons
       coc-nvim
       nvim-treesitter
-      copilot-vim
+      #copilot-vim
       plenary-nvim
       vim-wakatime
+      oil-nvim
     ];
 
   extraConfig = ''
@@ -111,12 +112,23 @@
 
 
   fonts.fontconfig.enable = true;
+  
+  xdg.mimeApps = {
+    enable = true;
+    defaultApplications = {
+      "image/png"  = [ "vlc.desktop" ];
+      "image/jpeg" = [ "vlc.desktop" ];
+      "image/webp" = [ "vlc.desktop" ];
+      "image/gif"  = [ "vlc.desktop" ];
+    };
+  };
+
 
   home.sessionVariables = {
     EDITOR = "nvim";
     BROWSER = "firefox";
     TERMINAL = "kitty";
-    IMAGE_VIEWER = "imv";
+    IMAGE_VIEWER = "vlc";
 
   };
 
