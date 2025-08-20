@@ -42,6 +42,8 @@
     ".config/kitty/kitty.conf".source = ./dotfiles/kitty/kitty.conf;
     ".config/fish/config.fish".source = ./dotfiles/fish/config.fish;
     ".config/mako/config".source = ./dotfiles/mako/config;
+    ".config/ranger/rc.conf".source = ./dotfiles/ranger/rc.conf;
+    ".config/ranger/rifle.conf".source = ./dotfiles/ranger/rifle.conf;
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
     #   org.gradle.console=verbose
